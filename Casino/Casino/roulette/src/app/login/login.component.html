@@ -1,0 +1,13 @@
+<div class="login-container">
+  <span [ngClass]="{'errMsg': true, 'hide':!loginError}"> Incorrect Id. Please try again.</span>
+  <form>
+    <div class="inp-container">
+      <label for="uid"> Enter Unique Id </label>
+      <input id="uid" type="text" [(ngModel)]="uniqueId" name="uidInput" required>
+    </div>
+    <br>
+    <span class="btn-container">
+      <button [disabled]="loading" (click)="login()" class="btn btn-primary">Start Playing</button>
+    </span>
+  </form>
+</div>

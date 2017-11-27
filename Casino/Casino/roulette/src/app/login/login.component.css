@@ -1,0 +1,16 @@
+.login-container {
+  text-align: center;
+}
+.inp-container {
+  margin: 0 auto;
+  /*display: inline-block;*/
+  width: 50%;
+}
+
+.hide {
+  display: none;
+}
+
+.errMsg {
+  color: red;
+}
