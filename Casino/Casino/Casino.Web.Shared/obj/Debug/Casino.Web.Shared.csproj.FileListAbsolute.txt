@@ -1,0 +1,7 @@
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Web.Shared.dll
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Web.Shared.pdb
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Shared.dll
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Shared.pdb
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.csprojResolveAssemblyReference.cache
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.dll
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.pdb

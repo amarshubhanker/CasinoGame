@@ -1,0 +1,123 @@
+﻿@model Casino.Web.Models.CustomerSearch
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    $('document').ready(function () {
+        var inputId;
+        var inputAmount;
+        $(".add-balance").click(function (event) { // Click to only happen on add-balance links
+            inputId = $(this).data('customer-id');
+            item = $(this).data('item');
+        });
+        $("#recharge").click(function (event) { // Click to only happen on recharge button
+            inputAmount = $('#amount').val();
+            $.post("/Customers/AddBalance", { customerId: inputId, amount: inputAmount }, function (data) {
+                debugger;
+                if (!data.error)
+                    location.reload();
+                else
+                    $("#errMsg").text(data.error);
+                    
+            })
+        });
+    });
+</script>
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Customers", FormMethod.Get))
+{
+
+<div class="form-horizontal">
+    <div class="col-lg-3">
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Name" })
+    </div>
+    <div class="col-lg-3">
+        @Html.TextBoxFor(model => model.EmailId, new { @class = "form-control", @placeholder = "EmailId" })
+    </div>
+    <div class="col-lg-3">
+        @Html.TextBoxFor(model => model.ContactNumber, new { @class = "form-control", @placeholder = "Contact Number" })
+    </div>
+</div>
+<input class="btn btn-primary" type="submit" name="submit" value="Search" />
+}
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            DOB
+            @*@Html.DisplayNameFor(model => model.DateOfBirth)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            Balance
+            @*@Html.DisplayNameFor(model => model.AccountBalance)*@
+        </th>
+        <th>
+            Unique Id
+            @*@Html.DisplayNameFor(model => model.UniqueId)*@
+        </th>
+        <th align="center">
+            Add Balance
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.CustomerList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @{
+                    var dob = item.DateOfBirth.ToString("dd/MM/yyyy");
+                }
+                @dob
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniqueId)
+            </td>
+            <td align="center">
+                <a class="add-balance" data-toggle="modal" data-target="#balance-modal" data-customer-id="@item.CustomerId">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </td>
+        </tr>
+}
+</table>
+
+<div class="modal fade" id="balance-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="rechargemodal-container">
+            <h1>Recharge Balance</h1><br>
+            <form>
+                <label for="amount">Amount</label><br />
+                <label id="errMsg"></label>
+                <input type="number" id="amount" name="amount" placeholder="0.00" style="float: right">
+                <div class="submit-container">
+                    <input type="button" id="recharge" name="recharge" class="recharge rechargemodal-submit" value="Recharge" style="display: inline-block">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

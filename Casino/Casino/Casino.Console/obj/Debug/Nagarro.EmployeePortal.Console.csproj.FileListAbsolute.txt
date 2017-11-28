@@ -1,0 +1,10 @@
+C:\Users\aastha\Desktop\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Console.exe.config
+\\AASTHA4301\Users\aastha\Desktop\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Console.exe.config
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Console.exe.config
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Console.exe
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Console.pdb
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Shared.dll
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\bin\Debug\Nagarro.EmployeePortal.Shared.pdb
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\obj\Debug\Nagarro.EmployeePortal.Console.csprojResolveAssemblyReference.cache
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\obj\Debug\Nagarro.EmployeePortal.Console.exe
+C:\Users\akshaymorey\Downloads\MVC\Day1\Framework\Nagarro.EmployeePortal\Nagarro.EmployeePortal\Nagarro.EmployeePortal.Console\obj\Debug\Nagarro.EmployeePortal.Console.pdb

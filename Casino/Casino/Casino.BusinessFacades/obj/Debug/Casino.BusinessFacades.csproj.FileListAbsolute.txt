@@ -1,0 +1,7 @@
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\bin\Debug\Casino.BusinessFacades.dll
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\bin\Debug\Casino.BusinessFacades.pdb
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\bin\Debug\Casino.Shared.dll
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\bin\Debug\Casino.Shared.pdb
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\obj\Debug\Casino.BusinessFacades.csprojResolveAssemblyReference.cache
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\obj\Debug\Casino.BusinessFacades.dll
+C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.BusinessFacades\obj\Debug\Casino.BusinessFacades.pdb
