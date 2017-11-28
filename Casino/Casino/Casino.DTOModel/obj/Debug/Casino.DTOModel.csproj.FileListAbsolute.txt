@@ -9,6 +9,5 @@ C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\bin\Debug\Casino.D
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\bin\Debug\Casino.DTOModel.pdb
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\bin\Debug\Casino.Shared.dll
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\bin\Debug\Casino.Shared.pdb
-C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\obj\Debug\Casino.DTOModel.csprojResolveAssemblyReference.cache
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\obj\Debug\Casino.DTOModel.dll
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.DTOModel\obj\Debug\Casino.DTOModel.pdb

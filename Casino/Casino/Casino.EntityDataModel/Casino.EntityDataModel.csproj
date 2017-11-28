@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converter\EntityConverter.cs" />
+    <Compile Include="EntityModel\CasinoDB.cs">
+      <DependentUpon>CasinoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EntityModel\CasinoModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,10 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CasinoModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EntityModel\Customer.cs">
-      <DependentUpon>CasinoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntityModel\SearchCustomer_Result.cs">
+    <Compile Include="EntityModel\SearchCustomers_Result.cs">
       <DependentUpon>CasinoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Exception\EntityConversionException.cs" />
@@ -81,13 +81,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="EntityModel\CasinoModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CasinoModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="EntityModel\CasinoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CasinoModel.edmx</DependentUpon>

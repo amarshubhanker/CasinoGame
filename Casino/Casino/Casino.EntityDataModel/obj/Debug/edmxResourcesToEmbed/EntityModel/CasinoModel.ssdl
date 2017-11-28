@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CasinoDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Customers">
+<Schema Namespace="UserDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CasinoDB">
     <Key>
       <PropertyRef Name="CustomerId" />
     </Key>
-    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="DOB" Type="date" Nullable="false" />
-    <Property Name="ContactNumber" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Balance" Type="decimal" Precision="12" Scale="2" />
     <Property Name="UniqueId" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="IdProof" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="BlockedAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="BloackedAmount" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="IdPoof" Type="varchar" MaxLength="60" Nullable="false" />
   </EntityType>
-  <Function Name="SearchCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="SearchCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Name" Type="varchar(max)" Mode="In" />
     <Parameter Name="Email" Type="varchar(max)" Mode="In" />
     <Parameter Name="ContactNumber" Type="varchar(max)" Mode="In" />
   </Function>
-  <EntityContainer Name="CasinoDbModelStoreContainer">
-    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+  <EntityContainer Name="UserDBModelStoreContainer">
+    <EntitySet Name="CasinoDB" EntityType="Self.CasinoDB" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

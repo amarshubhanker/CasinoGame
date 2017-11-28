@@ -34,8 +34,8 @@ namespace Casino.DTOModel
         [ViewModelPropertyMapping(MappingDirectionType.Both, "EmailId")]
         public string EmailId { get; set; }
 
-        [EntityPropertyMapping(MappingDirectionType.Both, "IdProof")]
-        //[ViewModelPropertyMapping(MappingDirectionType.Both, "IdentityProof")]
+        [EntityPropertyMapping(MappingDirectionType.Both, "IdPoof")]
+       // [ViewModelPropertyMapping(MappingDirectionType.Both, "IdentityProof")]
         public string IdentityProofFileName { get; set; }
 
         [EntityPropertyMapping(MappingDirectionType.Both, "Balance")]
@@ -46,7 +46,7 @@ namespace Casino.DTOModel
         [ViewModelPropertyMapping(MappingDirectionType.Both, "UniqueId")]
         public string UniqueId { get; set; }
 
-        [EntityPropertyMapping(MappingDirectionType.Both, "BlockedAmount")]
+        [EntityPropertyMapping(MappingDirectionType.Both, "BloackedAmount")]
         [ViewModelPropertyMapping(MappingDirectionType.Both, "BlockedAmount")]
         public decimal BlockedAmount { get; set; }
     }

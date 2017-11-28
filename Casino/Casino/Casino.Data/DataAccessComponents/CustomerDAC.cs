@@ -24,14 +24,14 @@ namespace Casino.Data
             IList<ICustomerDTO> retListCustomerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    List<Customer> customers = new List<Customer>();
-                    customers = context.SearchCustomer(customerDTO.Name, customerDTO.EmailId, customerDTO.ContactNumber).ToList();
+                    List<CasinoDB> customers = new List<CasinoDB>();
+                    customers = context.SearchCustomers(customerDTO.Name, customerDTO.EmailId, customerDTO.ContactNumber).ToList();
                     if (customers.Count > 0)
                     {
                         retListCustomerDTO = new List<ICustomerDTO>();
-                        foreach (Customer customer in customers)
+                        foreach (CasinoDB customer in customers)
                         {
                             ICustomerDTO retCustomerDTO = (ICustomerDTO)DTOFactory.Instance.Create(DTOType.CustomerDTO);
                             EntityConverter.FillDTOFromEntity(customer, retCustomerDTO);
@@ -53,9 +53,9 @@ namespace Casino.Data
             ICustomerDTO retValCustomerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer customer = context.Customers.Where(c => c.CustomerId == customerId).SingleOrDefault();
+                    CasinoDB customer = context.CasinoDBs.Where(c => c.CustomerId == customerId).SingleOrDefault();
                     if (customer.Balance + amount <= Constants.MAX_DECIMAL)
                         customer.Balance += amount;
                     if (context.SaveChanges() > 0)
@@ -78,11 +78,11 @@ namespace Casino.Data
             ICustomerDTO retValCustomerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer customer = new Customer();
+                    CasinoDB customer = new CasinoDB();
                     EntityConverter.FillEntityFromDTO(customerDTO, customer);
-                    context.Customers.Add(customer);
+                    context.CasinoDBs.Add(customer);
                     if (context.SaveChanges() > 0)
                     {
                         customerDTO.CustomerId = customer.CustomerId;
@@ -103,9 +103,9 @@ namespace Casino.Data
             ICustomerDTO retValCustomerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer customer = context.Customers.Where(c => c.UniqueId == uniqueId).SingleOrDefault();
+                    CasinoDB customer = context.CasinoDBs.Where(c => c.UniqueId == uniqueId).SingleOrDefault();
                     if (customer != null)
                     {
                         retValCustomerDTO = (ICustomerDTO)DTOFactory.Instance.Create(DTOType.CustomerDTO);
@@ -127,13 +127,13 @@ namespace Casino.Data
             IList<ICustomerDTO> retListCustomerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    List<Customer> customers = context.Customers.ToList();
+                    List<CasinoDB> customers = context.CasinoDBs.ToList();
                     if (customers.Count > 0)
                     {
                         retListCustomerDTO = new List<ICustomerDTO>();
-                        foreach (Customer customer in customers)
+                        foreach (CasinoDB customer in customers)
                         {
                             ICustomerDTO customerDTO = (ICustomerDTO)DTOFactory.Instance.Create(DTOType.CustomerDTO);
                             EntityConverter.FillDTOFromEntity(customer, customerDTO);

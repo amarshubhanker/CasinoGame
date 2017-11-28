@@ -1,0 +1,15 @@
+.login-container {
+  text-align: center;
+}
+.inp-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.hide {
+  display: none;
+}
+
+.errMsg {
+  color: red;
+}

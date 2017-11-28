@@ -1,0 +1,15 @@
+<div class="roulette-container">
+  <div class="img-container">
+    <img class="img-responsive" src="../../assets/roulette.jpg" alt="casino-img">
+  </div>
+
+  <div class="roulette-inp-container">
+    <span class="inp-span" *ngFor="let option of options; let i = index" [attr.data-index]="i">
+      <label [attr.for]="'bet' + i">{{option}}</label>
+      <input id="bet{{i}}" [(ngModel)]="betInp[i]" (change)="computeBet(i)" [disabled]="isInputDisabled(i) || !isDataRec" type="number" step="500" value="0" min="0" required>
+    </span>
+    <br>
+    <button id="btn-confirm" [disabled]="!isDataRec" class="btn btn-primary" (click)="play()">Play</button>
+  </div>
+</div>
+

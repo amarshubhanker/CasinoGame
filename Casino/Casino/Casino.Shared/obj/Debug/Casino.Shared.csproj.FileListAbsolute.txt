@@ -3,3 +3,8 @@ C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.
 C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Shared\obj\Debug\Casino.Shared.dll
 C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Shared\obj\Debug\Casino.Shared.pdb
 C:\Users\akshaymorey\Documents\Visual Studio 2013\Projects\Casino\Casino\Casino.Shared\obj\Debug\Casino.Shared.csprojResolveAssemblyReference.cache
+C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Shared\bin\Debug\Casino.Shared.dll
+C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Shared\bin\Debug\Casino.Shared.pdb
+C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Shared\obj\Debug\Casino.Shared.dll
+C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Shared\obj\Debug\Casino.Shared.pdb
+C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Shared\obj\Debug\Casino.Shared.csprojResolveAssemblyReference.cache

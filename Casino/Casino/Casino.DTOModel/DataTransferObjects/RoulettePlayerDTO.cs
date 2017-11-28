@@ -25,7 +25,7 @@ namespace Casino.DTOModel
         [ViewModelPropertyMapping(MappingDirectionType.Both, "AccountBalance")]
         public decimal AccountBalance { get; set; }
 
-        [EntityPropertyMapping(MappingDirectionType.Both, "BlockedAmount")]
+        [EntityPropertyMapping(MappingDirectionType.Both, "BloackedAmount")]
         [ViewModelPropertyMapping(MappingDirectionType.Both, "BlockedAmount")]
         public decimal BlockedAmount { get; set; }
 

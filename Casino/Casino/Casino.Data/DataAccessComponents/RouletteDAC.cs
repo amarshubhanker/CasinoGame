@@ -24,9 +24,9 @@ namespace Casino.Data
             IRoulettePlayerDTO retValPlayerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer customer = context.Customers.Where(c => c.UniqueId == uniqueId).SingleOrDefault();
+                    CasinoDB customer = context.CasinoDBs.Where(c => c.UniqueId == uniqueId).SingleOrDefault();
                     if (customer != null)
                     {
                         retValPlayerDTO = (IRoulettePlayerDTO)DTOFactory.Instance.Create(DTOType.RoulettePlayerDTO);
@@ -34,7 +34,7 @@ namespace Casino.Data
                     }
                 }
             }
-            catch (Exception ex)
+                catch (Exception ex)
             {
                 ExceptionManager.HandleException(ex);
                 throw new DACException(ex.Message);
@@ -47,13 +47,13 @@ namespace Casino.Data
             IRoulettePlayerDTO retValPlayerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer player = context.Customers.Where(c => c.CustomerId == playerDTO.CustomerId).SingleOrDefault();
+                    CasinoDB player = context.CasinoDBs.Where(c => c.CustomerId == playerDTO.CustomerId).SingleOrDefault();
                     if(player != null && player.Balance >= playerDTO.BlockedAmount)
                     {
                         player.Balance -= playerDTO.BlockedAmount;
-                        player.BlockedAmount += playerDTO.BlockedAmount;
+                        player.BloackedAmount += playerDTO.BlockedAmount;
                         if(context.SaveChanges() > 0) 
                         {
                             retValPlayerDTO = (IRoulettePlayerDTO)DTOFactory.Instance.Create(DTOType.RoulettePlayerDTO);
@@ -76,14 +76,14 @@ namespace Casino.Data
             IRoulettePlayerDTO retValPlayerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer player = context.Customers.Where(c => c.CustomerId == playerDTO.CustomerId).SingleOrDefault();
+                    CasinoDB player = context.CasinoDBs.Where(c => c.CustomerId == playerDTO.CustomerId).SingleOrDefault();
                     if (player != null)
                     {
                         // TODO:Check upper limit
                         player.Balance += playerDTO.WinAmount;
-                        player.BlockedAmount -= playerDTO.BetAmount;
+                        player.BloackedAmount -= playerDTO.BetAmount;
                         if (context.SaveChanges() > 0)
                         {
                             retValPlayerDTO = (IRoulettePlayerDTO)DTOFactory.Instance.Create(DTOType.RoulettePlayerDTO);
@@ -106,9 +106,9 @@ namespace Casino.Data
             IRoulettePlayerDTO retValPlayerDTO = null;
             try
             {
-                using (CasinoDbEntities context = new CasinoDbEntities())
+                using (UserDBEntities context = new UserDBEntities())
                 {
-                    Customer customer = context.Customers.Where(c => c.CustomerId == customerId).SingleOrDefault();
+                    CasinoDB customer = context.CasinoDBs.Where(c => c.CustomerId == customerId).SingleOrDefault();
                     if (customer != null)
                     {
                         retValPlayerDTO = (IRoulettePlayerDTO)DTOFactory.Instance.Create(DTOType.RoulettePlayerDTO);

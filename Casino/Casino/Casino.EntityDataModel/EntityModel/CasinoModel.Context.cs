@@ -15,10 +15,10 @@ namespace Casino.EntityDataModel.EntityModel
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class CasinoDbEntities : DbContext
+    public partial class UserDBEntities : DbContext
     {
-        public CasinoDbEntities()
-            : base("name=CasinoDbEntities")
+        public UserDBEntities()
+            : base("name=UserDBEntities")
         {
         }
     
@@ -27,9 +27,9 @@ namespace Casino.EntityDataModel.EntityModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<CasinoDB> CasinoDBs { get; set; }
     
-        public virtual ObjectResult<Customer> SearchCustomer(string name, string email, string contactNumber)
+        public virtual ObjectResult<CasinoDB> SearchCustomers(string name, string email, string contactNumber)
         {
             var nameParameter = name != null ?
                 new ObjectParameter("Name", name) :
@@ -43,10 +43,10 @@ namespace Casino.EntityDataModel.EntityModel
                 new ObjectParameter("ContactNumber", contactNumber) :
                 new ObjectParameter("ContactNumber", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Customer>("SearchCustomer", nameParameter, emailParameter, contactNumberParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CasinoDB>("SearchCustomers", nameParameter, emailParameter, contactNumberParameter);
         }
     
-        public virtual ObjectResult<Customer> SearchCustomer(string name, string email, string contactNumber, MergeOption mergeOption)
+        public virtual ObjectResult<CasinoDB> SearchCustomers(string name, string email, string contactNumber, MergeOption mergeOption)
         {
             var nameParameter = name != null ?
                 new ObjectParameter("Name", name) :
@@ -60,7 +60,7 @@ namespace Casino.EntityDataModel.EntityModel
                 new ObjectParameter("ContactNumber", contactNumber) :
                 new ObjectParameter("ContactNumber", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Customer>("SearchCustomer", mergeOption, nameParameter, emailParameter, contactNumberParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CasinoDB>("SearchCustomers", mergeOption, nameParameter, emailParameter, contactNumberParameter);
         }
     }
 }
