@@ -23,6 +23,12 @@ namespace Casino.Web.Controllers
 
             CustomerSearch searchResult = new CustomerSearch();
             searchResult.CustomerList = new List<Customer>();
+
+
+
+            if ((customerSearch.EmailId == null) && (customerSearch.Name == null) && (customerSearch.ContactNumber == null))
+            {
+
             if (res.IsValid())
             {
                 foreach (ICustomerDTO customerDTO in res.Data)
@@ -32,6 +38,25 @@ namespace Casino.Web.Controllers
                     searchResult.CustomerList.Add(customer);
                 }
             }
+
+            }
+
+            else
+            {
+                if (res.IsValid())
+                {
+                    foreach (ICustomerDTO customerDTO in res.Data)
+                    {
+                        Customer customer = new Customer();
+                        if ((customerDTO.Name == customerSearch.Name) || (customerDTO.EmailId == customerSearch.EmailId) || (customerDTO.ContactNumber == customerSearch.ContactNumber))
+                        {
+                            DTOConverter.FillViewModelFromDTO(customer, customerDTO);
+                            searchResult.CustomerList.Add(customer);
+                        }
+                    }
+                }
+            }
+
             return View(searchResult);
         }
 

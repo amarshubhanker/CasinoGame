@@ -26,3 +26,17 @@ C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Data\bin\Debug\EntityFramew
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Data\obj\Debug\Casino.Data.csprojResolveAssemblyReference.cache
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Data\obj\Debug\Casino.Data.dll
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Data\obj\Debug\Casino.Data.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.Data.dll.config
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.Data.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.Data.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.EntityDataModel.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.Shared.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\EntityFramework.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.EntityDataModel.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\Casino.Shared.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\EntityFramework.xml
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\obj\Debug\Casino.Data.csprojResolveAssemblyReference.cache
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\obj\Debug\Casino.Data.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Data\obj\Debug\Casino.Data.pdb

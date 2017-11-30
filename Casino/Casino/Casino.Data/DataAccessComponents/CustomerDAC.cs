@@ -13,6 +13,7 @@ namespace Casino.Data
 {
     public class CustomerDAC : DACBase, ICustomerDAC
     {
+        public int customerid;
         public CustomerDAC()
             : base(DACType.CustomerDAC)
         {
@@ -31,12 +32,14 @@ namespace Casino.Data
                     if (customers.Count > 0)
                     {
                         retListCustomerDTO = new List<ICustomerDTO>();
+
                         foreach (CasinoDB customer in customers)
-                        {
-                            ICustomerDTO retCustomerDTO = (ICustomerDTO)DTOFactory.Instance.Create(DTOType.CustomerDTO);
-                            EntityConverter.FillDTOFromEntity(customer, retCustomerDTO);
-                            retListCustomerDTO.Add(retCustomerDTO);
-                        }
+                            {
+            
+                                    ICustomerDTO retCustomerDTO = (ICustomerDTO)DTOFactory.Instance.Create(DTOType.CustomerDTO);
+                                    EntityConverter.FillDTOFromEntity(customer, retCustomerDTO);
+                                    retListCustomerDTO.Add(retCustomerDTO);
+                            }
                     }
                 }
             }
@@ -76,10 +79,16 @@ namespace Casino.Data
         public ICustomerDTO CreateCustomer(ICustomerDTO customerDTO)
         {
             ICustomerDTO retValCustomerDTO = null;
+            
             try
             {
                 using (UserDBEntities context = new UserDBEntities())
                 {
+
+                    customerid = context.CasinoDBs.Count();
+                    customerDTO.CustomerId = customerid;
+                    customerid++;
+
                     CasinoDB customer = new CasinoDB();
                     EntityConverter.FillEntityFromDTO(customerDTO, customer);
                     context.CasinoDBs.Add(customer);

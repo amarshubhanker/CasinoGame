@@ -14,8 +14,8 @@ namespace Casino.Shared
         string ContactNumber { get; set; }
         string EmailId { get; set; }
         string IdentityProofFileName { get; set; }
-        decimal AccountBalance { get; set; }
-        decimal BlockedAmount { get; set; }
+        Nullable<decimal> AccountBalance { get; set; }
+        Nullable<decimal> BlockedAmount { get; set; }
         string UniqueId { get; set; }
     }
 }

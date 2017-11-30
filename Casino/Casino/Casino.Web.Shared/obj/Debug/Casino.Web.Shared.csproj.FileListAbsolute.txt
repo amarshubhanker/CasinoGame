@@ -12,3 +12,10 @@ C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.csprojResolveAssemblyReference.cache
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.dll
 C:\Users\amarshubhanker\Desktop\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Web.Shared.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Web.Shared.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Shared.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\bin\Debug\Casino.Shared.pdb
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.csprojResolveAssemblyReference.cache
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.dll
+C:\Users\amarshubhanker\Downloads\CasinoGame\Casino\Casino\Casino.Web.Shared\obj\Debug\Casino.Web.Shared.pdb

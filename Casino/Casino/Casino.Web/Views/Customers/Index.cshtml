@@ -46,7 +46,7 @@
 }
 <br />
 <table class="table">
-    <tr>
+    <tr style="background-color: darkgoldenrod">
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -73,38 +73,42 @@
         </th>
         <th></th>
     </tr>
+    
+    @foreach (var item in Model.CustomerList)
+    {
 
-    @foreach (var item in Model.CustomerList) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @{
-                    var dob = item.DateOfBirth.ToString("dd/MM/yyyy");
-                }
-                @dob
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountBalance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UniqueId)
-            </td>
-            <td align="center">
-                <a class="add-balance" data-toggle="modal" data-target="#balance-modal" data-customer-id="@item.CustomerId">
-                    <span class="glyphicon glyphicon-plus"></span>
-                </a>
-            </td>
-        </tr>
-}
+    <tr style="background-color: cornsilk">
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @{
+                var dob = item.DateOfBirth.ToString("dd/MM/yyyy");
+            }
+            @dob
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniqueId)
+        </td>
+        <td align="center">
+            <a class="add-balance" data-toggle="modal" data-target="#balance-modal" data-customer-id="@item.CustomerId">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+        </td>
+    </tr>
+    }
 </table>
+
+
 
 <div class="modal fade" id="balance-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">

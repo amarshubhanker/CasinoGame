@@ -40,7 +40,7 @@ namespace Casino.DTOModel
 
         [EntityPropertyMapping(MappingDirectionType.Both, "Balance")]
         [ViewModelPropertyMapping(MappingDirectionType.Both, "AccountBalance")]
-        public decimal AccountBalance { get; set; }
+        public Nullable<decimal> AccountBalance { get; set; }
 
         [EntityPropertyMapping(MappingDirectionType.Both, "UniqueId")]
         [ViewModelPropertyMapping(MappingDirectionType.Both, "UniqueId")]
@@ -48,6 +48,6 @@ namespace Casino.DTOModel
 
         [EntityPropertyMapping(MappingDirectionType.Both, "BloackedAmount")]
         [ViewModelPropertyMapping(MappingDirectionType.Both, "BlockedAmount")]
-        public decimal BlockedAmount { get; set; }
+        public Nullable<decimal> BlockedAmount { get; set; }
     }
 }
